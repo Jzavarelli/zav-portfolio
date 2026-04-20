@@ -1,3 +1,9 @@
+@font-face {
+  font-family: "Jersey10";
+  src:local("Jersey10-Regular"),
+  url('./assets/fonts/Jersey10-Regular.ttf')
+}
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
