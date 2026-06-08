@@ -1,0 +1,69 @@
+/* Module Imports */
+
+/* Color Palette */
+$color_base: #213547;
+$color_one: #EFF1ED;
+$color_two: #247BA0;
+$color_three: #27233A;
+$color_four: #6F584B;
+$color_five: #214E34;
+
+@keyframes shake {
+    0% { transform: rotate(0deg); } 
+    10% { transform: rotate(2deg); }
+    20% { transform: rotate(0deg); }
+    30% { transform: rotate(-2deg); }
+    40% { transform: rotate(0deg); }
+    50% { transform: rotate(2deg); }
+    60% { transform: rotate(0deg); }
+    70% { transform: rotate(-2deg); }
+    80% { transform: rotate(0deg); }
+    90% { transform: rotate(2deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.shake:active {
+    animation-name: shake;
+    animation-duration: 0.5s;
+    transform-origin:50% 50%;
+    animation-iteration-count: infinite;
+}
+
+.collapse-card {
+    padding: 5px;
+    transition: 0.3s;
+}
+
+.card-body {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.card-button {
+    overflow: hidden;
+    cursor: pointer;
+    padding: 5px;
+    border: none;
+    background-color: transparent;
+    -moz-transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+
+.card-button .set-up {
+    transform: rotate(180deg);
+}
+
+.content-border {
+    overflow: hidden;
+    padding: 5px;
+    border-radius: 0px 0px 25px 25px;
+    border-bottom: 1px solid $color_base;
+    background-color: $color_four;
+    transition: height 0.2s ease-in-out;
+}
+
+.content-text {
+    padding: 20px;
+}

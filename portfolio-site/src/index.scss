@@ -1,0 +1,147 @@
+/* Import Modules */
+
+
+/* Custom Font Structures */
+@font-face {
+  font-family: "Jersey10";
+  src:local("Jersey10-Regular"),
+  url('./assets/fonts/Jersey10-Regular.ttf')
+}
+
+@font-face {
+  font-family: "Hack";
+  src:local("Hack-Regular"),
+  url('./assets/fonts/Hack-Regular.ttf')
+}
+
+@font-face {
+  font-family: "Hackbold";
+  src:local("Hack-Bold"),
+  url('./assets/fonts/Hack-Bold.ttf')
+}
+
+@font-face {
+  font-family: "Hackbolditalic";
+  src:local("Hack-BoldItalic"),
+  url('./assets/fonts/Hack-BoldItalic.ttf')
+}
+
+@font-face {
+  font-family: "Hackitalic";
+  src:local("Hack-Italic"),
+  url('./assets/fonts/Hack-Italic.ttf')
+}
+
+/* Color Palette */
+$color_one: #EFF1ED;
+$color_two: #247BA0;
+$color_three: #27233A;
+$color_four: #6F584B;
+$color_five: #214E34;
+
+/* Root Level CSS */
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* CSS Classes and IDs */
+body {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  padding: 0px 40px;
+  width: 60%;
+  min-height: 100vh;
+  background-color: $color_one;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 250px 0px 25px 0px;
+  background-color: $color_one;
+}
+
+h1 {
+  font-family: "Jersey10";
+  font-size: 8.0em;
+  margin: 0px 0px 5px 0px;
+  padding: 0px;
+}
+h2 {
+  font-family: "Jersey10";
+  font-size: 5.0em;
+  margin: 0px;
+  padding: 0px;
+}
+h3 {
+  font-family: "Jersey10";
+  font-size: 2.5em;
+  margin: 20px 0px 0px 10px;
+  padding: 0px;
+}
+
+p {
+  font-size: 1.5em;
+  margin: 5px 0px 0px 15px;
+}
+
+ul {
+  font-size: 1.5em;
+  margin-top: 5px;
+}
+
+b {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}
+
+img:hover {
+  filter: drop-shadow(1px 2px 1px rgb(0 0 0 / 0.3));
+  transform: translate(0px, -1px);
+  transition: filter 0.5s ease-in, transform 0.25s ease-in-out;
+}
+
+button {
+  border-radius: 2px;
+  border: 2px solid;
+}
+button:hover {
+  border-color: $color_two;
+}
+
+.statusIndicator {
+  justify-content: center;
+  color: #333333;
+  height: 25px;
+  width: 100px;
+}
+
+
+/* Responsive and Theming CSS */
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}

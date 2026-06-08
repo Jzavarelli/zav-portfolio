@@ -1,0 +1,138 @@
+/* Module Imports */
+
+/* Color Palette */
+$color_one: #EFF1ED;
+$color_two: #247BA0;
+$color_three: #27233A;
+$color_four: #6F584B;
+$color_five: #214E34;
+
+@keyframes shake {
+    0% { transform: rotate(0deg); } 
+    10% { transform: rotate(2deg); }
+    20% { transform: rotate(0deg); }
+    30% { transform: rotate(-2deg); }
+    40% { transform: rotate(0deg); }
+    50% { transform: rotate(2deg); }
+    60% { transform: rotate(0deg); }
+    70% { transform: rotate(-2deg); }
+    80% { transform: rotate(0deg); }
+    90% { transform: rotate(2deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.shake:active {
+    animation-name: shake;
+    animation-duration: 0.5s;
+    transform-origin:50% 50%;
+    animation-iteration-count: infinite;
+}
+
+.positionTitle {
+  color: $color_five;
+}
+
+/* CSS Section Boxes */
+.aboutEntries {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 10px 40px 10px;
+}
+
+/* About Divs */
+  .terminal {
+    border-radius: 10px;
+    color: #FFFFFF;
+    background-color: #333333;
+  }
+
+  .terminal .Bold {
+    font-family: "Hackbold";
+  }
+
+  .terminal .BoldItalic {
+    font-family: "Hackbolditalic";
+  }
+
+  #aboutBio {
+    font-family: "Hack";
+    font-size: 0.8em;
+    flex-basis: 65%;
+    margin: 0px 25px 0px 0px;
+    padding: 25px 75px 25px 25px;
+  }
+
+  #aboutSkills {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-basis: 35%;
+    margin: 0px;
+    padding: 25px 50px 25px 25px;
+    border-radius: 5px;
+    background-color: $color_two;
+    color: white;
+  }
+
+.projectEntries {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 10px 60px 10px; 
+}
+
+.stackEntries {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 10px 60px 10px; 
+}
+
+.experEntries {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 10px 60px 10px; 
+}
+
+.certEntries {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 10px 60px 10px; 
+}
+
+/* CSS Header and Footer */
+  #foot-left {
+    margin: 0px 100px 0px 0px;
+    align-self: flex-end;
+  }
+
+  #foot-right {
+    margin: 0px 0px 0px 100px;
+    align-self: center;
+  }
+
+/* CSS Flex Container  */
+.pocket_flex {
+  padding: 25px;
+  transition: transform 0.5s ease-out, box-shadow 0.5s ease-in;
+}
+
+.pocket_flex:hover {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  transform: translateX(10px);
+}
+
+.container_flex {
+  display: flex;
+  flex-direction: row;
+  margin: 20px 10px;
+}
+
+.container_flex div {
+  justify-content: center;
+}
+
+.container_flex img {
+  margin: 0px;
+  padding: 5px;
+  width: 50px;
+  height: 50px;
+}
