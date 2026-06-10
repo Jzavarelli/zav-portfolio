@@ -6,13 +6,13 @@ import tsLogo from '/logos/lang-typescript.svg'
 import mysqlLogo from '/logos/lang-mysql.svg'
 import bootstrapLogo from '/logos/stack-bootstrap.svg'
 import sassLogo from '/logos/stack-sass.svg'
-import bashLogo from '/logos/tool-bash.svg'
-import cLogo from '/logos/lang-c.svg'
-import cppLogo from '/logos/lang-cplusplus.svg'
-import cshrpLogo from '/logos/lang-csharp.svg'
-import cssLogo from '/logos/lang-css3.svg'
-import htmlLogo from '/logos/lang-html5.svg'
-import jsLogo from '/logos/lang-javascript.svg'
+// import bashLogo from '/logos/tool-bash.svg'
+// import cLogo from '/logos/lang-c.svg'
+// import cppLogo from '/logos/lang-cplusplus.svg'
+// import cshrpLogo from '/logos/lang-csharp.svg'
+// import cssLogo from '/logos/lang-css3.svg'
+// import htmlLogo from '/logos/lang-html5.svg'
+// import jsLogo from '/logos/lang-javascript.svg'
 
 /* Language Item Images */
 
@@ -20,7 +20,7 @@ import jsLogo from '/logos/lang-javascript.svg'
 /* Libraries and CSS */
 import './Portfolio.scss'
 
-import { useState } from 'react';
+// import { useState } from 'react';
 import { ReactTyped } from 'react-typed';
 
 import Collapse from './components/collapse_comp.tsx'
@@ -130,29 +130,202 @@ function Portfolio() {
         {/* Stack and Toolsets - Meant to reflect the categories from my Skills and linked from them like a T.O.C, where the individual parts of the Stack are dynamic with Modals custom Built. Themed on Toolset. */}
         <div className="stackEntries">
           <h2>Experience and Tools</h2>
-          <section className="container_flex">
-            <img src={reactLogo} alt="React Logo" className="shake" />
-            <img src={viteLogo} alt="Vite Logo" className="shake" />
-            <img src={springLogo} alt="Spring Logo" className="shake" />
-            <img src={tsLogo} alt="Typescript Logo" className="shake" />
-            <img src={mysqlLogo} alt="MySQL Logo" className="shake" />
-            <img src={bootstrapLogo} alt="Bootstrap Logo" className="shake" />
-            <img src={sassLogo} alt="Sass Logo" className="shake" />
-          </section>
-          <section className="container_flex">
-            <img src={cLogo} alt="C Logo" className="shake" />
-            <img src={cppLogo} alt="C Plus Plus Logo" className="shake" />
-            <img src={cshrpLogo} alt="C Sharp Logo" className="shake" />
-            <img src={cssLogo} alt="CSS Logo" className="shake" />
-            <img src={htmlLogo} alt="HTML Logo" className="shake" />
-            <img src={jsLogo} alt="Javascript Logo" className="shake" />
-            <img src={bashLogo} alt="Bash Logo" className="shake" />
-          </section>
+          <div className="container_grid">
+            <section className="container_flex">
+              <Modal 
+                skillImage={reactLogo}
+                skillAlt='React Logo'
+                title="React Item"
+                children='Used React in Blarg Blarg.'
+              />
+              <Modal 
+                skillImage={viteLogo}
+                skillAlt='Vite Logo'
+                title="Vite Item"
+                children='Used in Blarg Blarg.'
+              />
+              <Modal 
+                skillImage={springLogo}
+                skillAlt='Spring Boot Logo'
+                title="Spring Boot Item"
+                children='Used in Blarg Blarg.'
+              />
+              <Modal 
+                skillImage={tsLogo}
+                skillAlt='TypeScript Logo'
+                title="TypeScript Item"
+                children='Used in Blarg Blarg.'
+              />
+              <Modal 
+                skillImage={mysqlLogo}
+                skillAlt='MySQL Logo'
+                title="React Item"
+                children='Used React in Blarg Blarg.'
+              />
+              <Modal 
+                skillImage={bootstrapLogo}
+                skillAlt='Bootstrap Logo'
+                title="Bootstrap Item"
+                children='Used in Blarg Blarg.'
+              />
+              <Modal 
+                skillImage={sassLogo}
+                skillAlt='SASS Logo'
+                title="SASS Item"
+                children='Used SASS in Blarg Blarg.'
+              />
+            </section>
+            <section className="container_flex">
+              <Modal 
+                skillImage={reactLogo}
+                skillAlt='React Logo'
+                title="React Item"
+                children='Used React in Blarg Blarg.'
+              />
+              <Modal 
+                skillImage={viteLogo}
+                skillAlt='Vite Logo'
+                title="Vite Item"
+                children='Used in Blarg Blarg.'
+              />
+              <Modal 
+                skillImage={springLogo}
+                skillAlt='Spring Boot Logo'
+                title="Spring Boot Item"
+                children='Used in Blarg Blarg.'
+              />
+              <Modal 
+                skillImage={tsLogo}
+                skillAlt='TypeScript Logo'
+                title="TypeScript Item"
+                children='Used in Blarg Blarg.'
+              />
+              <Modal 
+                skillImage={mysqlLogo}
+                skillAlt='MySQL Logo'
+                title="React Item"
+                children='Used React in Blarg Blarg.'
+              />
+              <Modal 
+                skillImage={bootstrapLogo}
+                skillAlt='Bootstrap Logo'
+                title="Bootstrap Item"
+                children='Used in Blarg Blarg.'
+              />
+              <Modal 
+                skillImage={sassLogo}
+                skillAlt='SASS Logo'
+                title="SASS Item"
+                children='Used SASS in Blarg Blarg.'
+              />
+            </section>
+            <section className="container_flex">
+              <Modal 
+                skillImage={reactLogo}
+                skillAlt='React Logo'
+                title="React Item"
+                children='Used React in Blarg Blarg.'
+              />
+              <Modal 
+                skillImage={viteLogo}
+                skillAlt='Vite Logo'
+                title="Vite Item"
+                children='Used in Blarg Blarg.'
+              />
+              <Modal 
+                skillImage={springLogo}
+                skillAlt='Spring Boot Logo'
+                title="Spring Boot Item"
+                children='Used in Blarg Blarg.'
+              />
+              <Modal 
+                skillImage={tsLogo}
+                skillAlt='TypeScript Logo'
+                title="TypeScript Item"
+                children='Used in Blarg Blarg.'
+              />
+              <Modal 
+                skillImage={mysqlLogo}
+                skillAlt='MySQL Logo'
+                title="React Item"
+                children='Used React in Blarg Blarg.'
+              />
+              <Modal 
+                skillImage={bootstrapLogo}
+                skillAlt='Bootstrap Logo'
+                title="Bootstrap Item"
+                children='Used in Blarg Blarg.'
+              />
+              <Modal 
+                skillImage={sassLogo}
+                skillAlt='SASS Logo'
+                title="SASS Item"
+                children='Used SASS in Blarg Blarg.'
+              />
+            </section>
+            <section className="container_flex">
+              <Modal 
+                skillImage={reactLogo}
+                skillAlt='React Logo'
+                title="React Item"
+                children='Used React in Blarg Blarg.'
+              />
+              <Modal 
+                skillImage={viteLogo}
+                skillAlt='Vite Logo'
+                title="Vite Item"
+                children='Used in Blarg Blarg.'
+              />
+              <Modal 
+                skillImage={springLogo}
+                skillAlt='Spring Boot Logo'
+                title="Spring Boot Item"
+                children='Used in Blarg Blarg.'
+              />
+              <Modal 
+                skillImage={tsLogo}
+                skillAlt='TypeScript Logo'
+                title="TypeScript Item"
+                children='Used in Blarg Blarg.'
+              />
+              <Modal 
+                skillImage={mysqlLogo}
+                skillAlt='MySQL Logo'
+                title="React Item"
+                children='Used React in Blarg Blarg.'
+              />
+              <Modal 
+                skillImage={bootstrapLogo}
+                skillAlt='Bootstrap Logo'
+                title="Bootstrap Item"
+                children='Used in Blarg Blarg.'
+              />
+              <Modal 
+                skillImage={sassLogo}
+                skillAlt='SASS Logo'
+                title="SASS Item"
+                children='Used SASS in Blarg Blarg.'
+              />
+            </section>
+          </div>
         </div>
 
         {/* Experiences - . */}
         <div className="experEntries">
           <h2>Experience</h2>
+            <article className="pocket_flex">
+              <h3>Zoot Enterprises Inc.</h3>
+              <p>
+                <b>Technical Writer</b>
+                <br />
+                <b>Full-Time | January 2026 - PRESENT</b>
+                <br />
+                ABCD
+              </p>
+              <ul>
+                <li></li>
+              </ul>
+            </article>
             <article className="pocket_flex">
               <h3>Management Science and Innovation</h3>
               <p>

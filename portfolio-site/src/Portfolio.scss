@@ -39,40 +39,40 @@ $color_five: #214E34;
   margin: 10px 10px 40px 10px;
 }
 
-/* About Divs */
-  .terminal {
-    border-radius: 10px;
-    color: #FFFFFF;
-    background-color: #333333;
-  }
+    /* About Divs */
+    .terminal {
+      border-radius: 10px;
+      color: #FFFFFF;
+      background-color: #333333;
+    }
 
-  .terminal .Bold {
-    font-family: "Hackbold";
-  }
+    .terminal .Bold {
+      font-family: "Hackbold";
+    }
 
-  .terminal .BoldItalic {
-    font-family: "Hackbolditalic";
-  }
+    .terminal .BoldItalic {
+      font-family: "Hackbolditalic";
+    }
 
-  #aboutBio {
-    font-family: "Hack";
-    font-size: 0.8em;
-    flex-basis: 65%;
-    margin: 0px 25px 0px 0px;
-    padding: 25px 75px 25px 25px;
-  }
+    #aboutBio {
+      font-family: "Hack";
+      font-size: 0.8em;
+      flex-basis: 65%;
+      margin: 0px 25px 0px 0px;
+      padding: 25px 75px 25px 25px;
+    }
 
-  #aboutSkills {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    flex-basis: 35%;
-    margin: 0px;
-    padding: 25px 50px 25px 25px;
-    border-radius: 5px;
-    background-color: $color_two;
-    color: white;
-  }
+    #aboutSkills {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex-basis: 35%;
+      margin: 0px;
+      padding: 25px 50px 25px 25px;
+      border-radius: 5px;
+      background-color: $color_two;
+      color: white;
+    }
 
 .projectEntries {
   display: flex;
@@ -85,6 +85,20 @@ $color_five: #214E34;
   flex-direction: column;
   margin: 10px 10px 60px 10px; 
 }
+
+    .container_grid {
+      display: grid;  
+      grid-template-columns: auto auto;
+      justify-content: center;
+      padding: 10px;
+    }
+
+    .container_grid .container_flex {
+      margin-right: auto;
+      padding: 25px;
+      border: 2px dotted #333333;
+      border-radius: 4px;
+    }
 
 .experEntries {
   display: flex;

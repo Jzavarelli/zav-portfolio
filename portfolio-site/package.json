@@ -1,9 +1,9 @@
 {
   "name": "portfolio-zavarelli",
   "private": true,
-  "version": "0.1.1",
+  "version": "0.2.1",
   "type": "module",
-  "homepage": "https://Jzavarelli.github.io/portfolio-zavarelli/",
+  "homepage": "https://jzavarelli.github.io/portfolio-zavarelli/",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",

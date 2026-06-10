@@ -32,7 +32,18 @@
   url('./assets/fonts/Hack-Italic.ttf')
 }
 
+/* Custom Animations */
+@keyframes slideInFromBottom {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
 /* Color Palette */
+$background-color: #EAEAEA;
 $color_one: #EFF1ED;
 $color_two: #247BA0;
 $color_three: #27233A;
@@ -46,12 +57,14 @@ $color_five: #214E34;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #333333;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  animation: 1.5s ease-in-out 0s 1 slideInFromBottom;
 }
 
 /* CSS Classes and IDs */
@@ -62,7 +75,8 @@ body {
   padding: 0px 40px;
   width: 60%;
   min-height: 100vh;
-  background-color: $color_one;
+  background-color: $background-color;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
 }
 
 footer {
@@ -70,7 +84,7 @@ footer {
   flex-direction: row;
   justify-content: center;
   margin: 250px 0px 25px 0px;
-  background-color: $color_one;
+  background-color: $background-color;
 }
 
 h1 {
@@ -136,12 +150,19 @@ button:hover {
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
-    background-color: #ffffff;
+    background-image: url("../src/assets/images/background-light.jpg");
+    background-repeat: repeat-y;
+    background-size: contain;
   }
-  a:hover {
-    color: #747bff;
+}
+
+/* Responsive and Theming CSS */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: #213547;
+    background-image: url("../src/assets/images/background-dark.jpg");
+    background-repeat: repeat-y;
+    background-size: contain;
   }
-  button {
-    background-color: #f9f9f9;
-  }
+
 }
