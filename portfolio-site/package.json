@@ -1,7 +1,7 @@
 {
   "name": "portfolio-zavarelli",
   "private": true,
-  "version": "0.2.1",
+  "version": "0.3.1",
   "type": "module",
   "homepage": "https://jzavarelli.github.io/portfolio-zavarelli/",
   "scripts": {
@@ -13,10 +13,6 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
-    "@emotion/react": "^11.14.0",
-    "@emotion/styled": "^11.14.1",
-    "@mui/icons-material": "^9.0.1",
-    "@mui/material": "^9.0.1",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-typed": "^2.0.12",
