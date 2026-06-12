@@ -6,6 +6,17 @@ import tsLogo from '/logos/lang-typescript.svg';
 import mysqlLogo from '/logos/lang-mysql.svg';
 import bootstrapLogo from '/logos/stack-bootstrap.svg';
 import sassLogo from '/logos/stack-sass.svg';
+
+/* Language Item Images */
+import javaLogo from '/logos/lang-java.svg';
+import pyLogo from '/logos/lang-python.svg';
+import cppLogo from '/logos/lang-cplusplus.svg';
+import cshrpLogo from '/logos/lang-csharp.svg';
+import sqlLogo from '/logos/lang-mysql.svg';
+import htmlLogo from '/logos/lang-html5.svg';
+import cssLogo from '/logos/lang-css3.svg';
+
+/* Homelab Tools Images */
 // import bashLogo from '/logos/tool-bash.svg';
 // import cLogo from '/logos/lang-c.svg';
 // import cppLogo from '/logos/lang-cplusplus.svg';
@@ -14,8 +25,15 @@ import sassLogo from '/logos/stack-sass.svg';
 // import htmlLogo from '/logos/lang-html5.svg';
 // import jsLogo from '/logos/lang-javascript.svg';
 
-/* Language Item Images */
-
+/* Programming Tools Images */
+import archLogo from '/logos/tool-archlinux.svg';
+import gitLogo from '/logos/tool-git.svg';
+import sshLogo from '/logos/tool-ssh.svg';
+import vscodeLogo from '/logos/tool-vscode.svg';
+import godotLogo from '/logos/tool-godot.svg';
+import unreaLogo from '/logos/tool-unrealengine.svg';
+import unityLogo from '/logos/tool-unity.svg';
+import umLogo from '/logos/tool-uml.svg';
 
 /* Libraries and CSS */
 import './styles/Portfolio.scss';
@@ -163,9 +181,21 @@ function Portfolio() {
 
           <Collapse
             open
+            title="Yet Another Game Release Calendar"
+            timeline="06-2026 | PRESENT"
+            children="Yet Another Game Release Calendar, or YAGRC, is a Game Release calendar serving as a solution to laggy, bloated, and over-advertised game release trackers. I am working with another Developer to build a collaborative calendar updated by a Headless CMS API for dynamically adding game titles to the calendar. The system utilizes a React NextJS Stack deployed via Vercel under our unique domain." />
+
+          <Collapse
+            open
+            title="Roleplay Character Creator and Manager"
+            timeline="01-2026 | PRESENT"
+            children="A dynamic and complex Desktop Native application built with Python to allow for easy Character Creation and Management in Table Top Roleplaying Games. I am working on creating the Open-Source project to allow individuals, with access to a Desktop, to create Characters for any desired TTRPG." />
+
+          <Collapse
+            open
             title="T.A.P.S IRS Timekeeping System"
             timeline="05-2025 | 09-2025"
-            children="" />
+            children="Development of the timekeeping mechanisms within the IRS of the United States Government. I worked on creating, editing, reviewing, and designing the Timekeeping system involving Business Analysis, automation integration with UiPath Tools, and Java Code Development in the Department." />
 
           <Collapse
             open
@@ -177,13 +207,14 @@ function Portfolio() {
             open
             title="Little-Man Stack Machine Junior Project"
             timeline="07-2022 | 12-2022"
-            children="A C-based Stack machine built to replicate the 1970 Little Man Computer that led the computer revolution of software development." />
+            children="A C Built Stack Program built to replacte the 1970s Little Man Stack Machine Computer leading the cutting edge of software development. I worked with complex C structures and pointer handling in an education environment, solving problems with peers and mentors to achieve a working system." />
         </div>
 
         {/* Stack and Toolsets - Meant to reflect the categories from my Skills and linked from them like a T.O.C, where the individual parts of the Stack are dynamic with Modals custom Built. Themed on Toolset. */}
         <div className="stackEntries">
           <h2>Experience and Tools</h2>
           <div className="container_grid">
+            {/* Current Development Stack of Preference */}
             <section className="container_flex">
               <Modal 
                 skillImage={reactLogo}
@@ -228,6 +259,52 @@ function Portfolio() {
                 children='Used SASS in Blarg Blarg.'
               />
             </section>
+            {/* Current Development Language Skillset */}
+            <section className="container_flex">
+              <Modal 
+                skillImage={javaLogo}
+                skillAlt='Java Logo'
+                title="Java Item"
+                children='Used Java in Blarg Blarg.'
+              />
+              <Modal 
+                skillImage={pyLogo}
+                skillAlt='Python Logo'
+                title="Python Item"
+                children='Used in Blarg Blarg.'
+              />
+              <Modal 
+                skillImage={cppLogo}
+                skillAlt='C Plus Plus Logo'
+                title="C Plus Plus Item"
+                children='Used in Blarg Blarg.'
+              />
+              <Modal 
+                skillImage={cshrpLogo}
+                skillAlt='C Sharp Logo'
+                title="C Sharp Item"
+                children='Used in Blarg Blarg.'
+              />
+              <Modal 
+                skillImage={sqlLogo}
+                skillAlt='MySQL Logo'
+                title="MySQL Item"
+                children='Used React in Blarg Blarg.'
+              />
+              <Modal 
+                skillImage={htmlLogo}
+                skillAlt='HTML Logo'
+                title="HTML Item"
+                children='Used in Blarg Blarg.'
+              />
+              <Modal 
+                skillImage={cssLogo}
+                skillAlt='CSS Logo'
+                title="CSS Item"
+                children='Used SASS in Blarg Blarg.'
+              />
+            </section>
+            {/* Current Homelab Tool Suite */}
             <section className="container_flex">
               <Modal 
                 skillImage={reactLogo}
@@ -272,98 +349,55 @@ function Portfolio() {
                 children='Used SASS in Blarg Blarg.'
               />
             </section>
+            {/* Current Development Tool Preferences */}
             <section className="container_flex">
               <Modal 
-                skillImage={reactLogo}
-                skillAlt='React Logo'
-                title="React Item"
+                skillImage={archLogo}
+                skillAlt='Arch Linux Logo'
+                title="Arch Linux  Item"
+                children='Used Arch Linux  in Blarg Blarg.'
+              />
+              <Modal 
+                skillImage={gitLogo}
+                skillAlt='Git Logo'
+                title="Git Item"
+                children='Used in Blarg Blarg.'
+              />
+              <Modal 
+                skillImage={sshLogo}
+                skillAlt='SSH Logo'
+                title="SSH Item"
+                children='Used in Blarg Blarg.'
+              />
+              <Modal 
+                skillImage={vscodeLogo}
+                skillAlt='VS Code Logo'
+                title="VS Code Item"
+                children='Used in Blarg Blarg.'
+              />
+              <Modal 
+                skillImage={godotLogo}
+                skillAlt='Godot Logo'
+                title="Godot Engine Item"
                 children='Used React in Blarg Blarg.'
               />
               <Modal 
-                skillImage={viteLogo}
-                skillAlt='Vite Logo'
-                title="Vite Item"
+                skillImage={unreaLogo}
+                skillAlt='Unreal Logo'
+                title="Unreal Engine Item"
                 children='Used in Blarg Blarg.'
               />
               <Modal 
-                skillImage={springLogo}
-                skillAlt='Spring Boot Logo'
-                title="Spring Boot Item"
-                children='Used in Blarg Blarg.'
-              />
-              <Modal 
-                skillImage={tsLogo}
-                skillAlt='TypeScript Logo'
-                title="TypeScript Item"
-                children='Used in Blarg Blarg.'
-              />
-              <Modal 
-                skillImage={mysqlLogo}
-                skillAlt='MySQL Logo'
-                title="React Item"
-                children='Used React in Blarg Blarg.'
-              />
-              <Modal 
-                skillImage={bootstrapLogo}
-                skillAlt='Bootstrap Logo'
-                title="Bootstrap Item"
-                children='Used in Blarg Blarg.'
-              />
-              <Modal 
-                skillImage={sassLogo}
-                skillAlt='SASS Logo'
-                title="SASS Item"
-                children='Used SASS in Blarg Blarg.'
-              />
-            </section>
-            <section className="container_flex">
-              <Modal 
-                skillImage={reactLogo}
-                skillAlt='React Logo'
-                title="React Item"
-                children='Used React in Blarg Blarg.'
-              />
-              <Modal 
-                skillImage={viteLogo}
-                skillAlt='Vite Logo'
-                title="Vite Item"
-                children='Used in Blarg Blarg.'
-              />
-              <Modal 
-                skillImage={springLogo}
-                skillAlt='Spring Boot Logo'
-                title="Spring Boot Item"
-                children='Used in Blarg Blarg.'
-              />
-              <Modal 
-                skillImage={tsLogo}
-                skillAlt='TypeScript Logo'
-                title="TypeScript Item"
-                children='Used in Blarg Blarg.'
-              />
-              <Modal 
-                skillImage={mysqlLogo}
-                skillAlt='MySQL Logo'
-                title="React Item"
-                children='Used React in Blarg Blarg.'
-              />
-              <Modal 
-                skillImage={bootstrapLogo}
-                skillAlt='Bootstrap Logo'
-                title="Bootstrap Item"
-                children='Used in Blarg Blarg.'
-              />
-              <Modal 
-                skillImage={sassLogo}
-                skillAlt='SASS Logo'
-                title="SASS Item"
+                skillImage={unityLogo}
+                skillAlt='Unity Logo'
+                title="Unity Engine Item"
                 children='Used SASS in Blarg Blarg.'
               />
             </section>
           </div>
         </div>
 
-        {/* Experiences - . */}
+        {/* Experiences - A showcase of the different work I am involved with since the start of my college career to the present day. */}
         <div className="experEntries">
           <h2>Experience</h2>
             <article className="pocket_flex">
@@ -431,18 +465,21 @@ function Portfolio() {
             </article>
         </div>
 
-        {/* Professional Certifications - . */}
+        {/* Professional Certifications - The dynamic list of certifications from my JSON document to showcase the different tested knowledge I am capable of in programming. */}
         <div className="certEntries">
           <h2>Certifications</h2>
           {certFile.map((cert: Certs) => (
             <div key={cert.id}>
               <article className="pocket_flex">
-                <h3>{cert.title}</h3>
+                <h3>
+                  {cert.title} 
+                </h3>
+                <button className="statusIndicator" onClick={() => window.location.href = cert.link_path}>
+                    <b>{getStatus(cert.expire_date)}</b>
+                </button>
                 <p>
-                  <button className="statusIndicator" onClick={() => window.location.href = cert.link_path}>
-                    {getStatus(cert.expire_date)}
-                  </button>
-                  Earned: {cert.earned_date} Issuer: {cert.issuer}
+                  Earned: {cert.earned_date} <br />
+                  Issuer: {cert.issuer}
                 </p>
               </article>
             </div>

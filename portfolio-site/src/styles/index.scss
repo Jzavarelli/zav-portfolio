@@ -123,18 +123,15 @@ img:hover {
 }
 
 button {
+  margin: 5px 5px 5px 5px;
+  padding: 5px 5px 5px 5px;
+  min-width: 100px;
+  min-height: 25px;
   border-radius: 2px;
   border: 2px solid;
 }
 button:hover {
   border-color: scss.$color_glauceous;
-}
-
-.statusIndicator {
-  justify-content: center;
-  color: scss.$color_background_dark;
-  height: 25px;
-  width: 100px;
 }
 
 

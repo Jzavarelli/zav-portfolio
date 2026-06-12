@@ -36,6 +36,11 @@
   color: scss.$color_darkspruce;
 }
 
+.statusIndicator {
+  width: 225px;
+  color: scss.$color_background_dark;
+}
+
 /* CSS Section Boxes */
 .aboutEntries {
   display: flex;
@@ -165,15 +170,15 @@
 }
 
 /* CSS Header and Footer */
-  #foot-left {
-    margin: 0px 100px 0px 0px;
-    align-self: flex-end;
-  }
+#foot-left {
+  margin: 0px 100px 0px 0px;
+  align-self: flex-end;
+}
 
-  #foot-right {
-    margin: 0px 0px 0px 100px;
-    align-self: center;
-  }
+#foot-right {
+  margin: 0px 0px 0px 100px;
+  align-self: center;
+}
 
 /* CSS Flex Container  */
 .pocket_flex {

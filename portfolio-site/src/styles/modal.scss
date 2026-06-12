@@ -12,8 +12,9 @@
 
 .modal-main {
     position: fixed;
+    padding: 25px;
     background: scss.$color_background;
-    width: 35rem;
+    width: 750px;
     height: auto;
     top: 40%;
     left: 50%;
@@ -21,7 +22,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-radius: 20px;
+    border-radius: 10px;
 }
 
 .modal-display-show {

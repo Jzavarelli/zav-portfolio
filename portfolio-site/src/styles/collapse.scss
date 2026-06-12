@@ -51,10 +51,9 @@
 
 .content-border {
     overflow: hidden;
-    padding: 5px;
     border-radius: 0px 0px 25px 25px;
     border-bottom: 1px solid scss.$color_black;
-    background-color: scss.$color_ashgrey;
+    background-color: scss.$color_white;
     transition: height 0.2s ease-in-out;
 }
 
