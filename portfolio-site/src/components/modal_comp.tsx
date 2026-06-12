@@ -1,5 +1,5 @@
 /* Libraries and CSS */
-import './modal.scss'
+import '../styles/modal.scss'
 
 import React, { useState } from "react"
 

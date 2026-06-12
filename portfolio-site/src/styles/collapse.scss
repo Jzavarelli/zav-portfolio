@@ -1,13 +1,7 @@
-/* Module Imports */
+/* Import Modules */
+@use "./sassvari" as scss;
 
-/* Color Palette */
-$color_base: #213547;
-$color_one: #EFF1ED;
-$color_two: #247BA0;
-$color_three: #27233A;
-$color_four: #6F584B;
-$color_five: #214E34;
-
+/* Custom Animations */
 @keyframes shake {
     0% { transform: rotate(0deg); } 
     10% { transform: rotate(2deg); }
@@ -59,8 +53,8 @@ $color_five: #214E34;
     overflow: hidden;
     padding: 5px;
     border-radius: 0px 0px 25px 25px;
-    border-bottom: 1px solid $color_base;
-    background-color: $color_four;
+    border-bottom: 1px solid scss.$color_black;
+    background-color: scss.$color_ashgrey;
     transition: height 0.2s ease-in-out;
 }
 

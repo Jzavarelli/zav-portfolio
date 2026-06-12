@@ -1,33 +1,44 @@
 /* Stack Item Images */
-import reactLogo from '/logos/stack-react.svg'
-import viteLogo from '/logos/stack-vite.svg'
-import springLogo from '/logos/stack-spring.svg'
-import tsLogo from '/logos/lang-typescript.svg'
-import mysqlLogo from '/logos/lang-mysql.svg'
-import bootstrapLogo from '/logos/stack-bootstrap.svg'
-import sassLogo from '/logos/stack-sass.svg'
-// import bashLogo from '/logos/tool-bash.svg'
-// import cLogo from '/logos/lang-c.svg'
-// import cppLogo from '/logos/lang-cplusplus.svg'
-// import cshrpLogo from '/logos/lang-csharp.svg'
-// import cssLogo from '/logos/lang-css3.svg'
-// import htmlLogo from '/logos/lang-html5.svg'
-// import jsLogo from '/logos/lang-javascript.svg'
+import reactLogo from '/logos/stack-react.svg';
+import viteLogo from '/logos/stack-vite.svg';
+import springLogo from '/logos/stack-spring.svg';
+import tsLogo from '/logos/lang-typescript.svg';
+import mysqlLogo from '/logos/lang-mysql.svg';
+import bootstrapLogo from '/logos/stack-bootstrap.svg';
+import sassLogo from '/logos/stack-sass.svg';
+// import bashLogo from '/logos/tool-bash.svg';
+// import cLogo from '/logos/lang-c.svg';
+// import cppLogo from '/logos/lang-cplusplus.svg';
+// import cshrpLogo from '/logos/lang-csharp.svg';
+// import cssLogo from '/logos/lang-css3.svg';
+// import htmlLogo from '/logos/lang-html5.svg';
+// import jsLogo from '/logos/lang-javascript.svg';
 
 /* Language Item Images */
 
 
 /* Libraries and CSS */
-import './Portfolio.scss'
+import './styles/Portfolio.scss';
 
 // import { useState } from 'react';
 import { ReactTyped } from 'react-typed';
 
-import Collapse from './components/collapse_comp.tsx'
-import Modal from './components/modal_comp.tsx'
-import Footer from './components/footer_port.tsx'
+import Collapse from './components/collapse_comp.tsx';
+import Modal from './components/modal_comp.tsx';
+import Footer from './components/footer_port.tsx';
+
+import certFile from "../src/assets/docs/certs.json";
 
 /* Constants and Variables */
+interface Certs {
+  id: number;
+  title: string;
+  issuer: string;
+  earned_date: string;
+  expire_date: string;
+  link_path: string;
+};
+
 const positions: string[] = [
   "Software Developer",
   "Software Engineer",
@@ -37,6 +48,13 @@ const positions: string[] = [
 ];
 
 function Portfolio() {
+
+  const getStatus = (dateString: string): string => {
+    const expiration = new Date(dateString);
+    const today = new Date();
+
+    return expiration > today ? "Active" : "Expired";
+  }
 
   return (
     <>
@@ -51,21 +69,56 @@ function Portfolio() {
               {/* Terminal Style - Meant to Look like the Terminals a Developer would use with Updating Views. */}
               <div className="terminal" id="aboutBio"> 
                 <p>
-                  <b className="Bold">jzavarelli&#64;zavpit: $</b> <b className="BoldItalic">User --history</b><br />
-                  I am Jace Zavarelli, a Software Developer and Designer with an interest and hobby in Game Development! I love to build systems that are complex and innovative in any space I enter, a user-oriented and collaborative development environment creates the strongest of systems!
+                  <b className="Bold">jzavarelli</b>&#64;<b className="Bold2">zavpit</b>: $&nbsp;
+                   <b className="BoldItalic">
+                  <ReactTyped 
+                      strings={["User --history"]}
+                      typeSpeed={10}
+                      loop={false}
+                      showCursor={false}
+                      backSpeed={0}
+                      startDelay={1500} />
+                  </b><br />
+                  <span className="delayText_a">
+                    I am Jace Zavarelli, a Software Developer and Designer with an interest and hobby in Game Development! I love to build systems that are complex and innovative in any space I enter, a user-oriented and collaborative development environment creates the strongest of systems!
+                  </span>
                   <br />
                   <br />
-                  <b className="Bold">jzavarelli&#64;zavpit: $</b> <b className="BoldItalic">User --experience</b><br />
-                  With my 4+ years of educational and internship experience, along with the last year of career work, I have developed software for ASM micro-PCB applications and designed Front-End environments to feature API integration and React functionality. I am a developer who knows the versatility of researching language documentation effectively while throwing solutions at the wall to create solutions with a speedy-learning outlook. I enjoy working with teams and collaborating in the workspace, but I am experienced as a solo developer who is never afraid to ask for assistance on problems!
+                  <span className="delayBlock_b">
+                    <b className="Bold">jzavarelli</b>&#64;<b className="Bold2">zavpit</b>: $&nbsp;
+                    <b className="BoldItalic">
+                      <ReactTyped 
+                        strings={["User --experience"]}
+                        typeSpeed={10}
+                        loop={false}
+                        showCursor={false}
+                        backSpeed={0}
+                        startDelay={3500} />
+                    </b><br />
+                  </span>
+                  <span className="delayText_b">
+                    With my 4+ years of educational and internship experience, along with the last year of career work, I have developed software for ASM micro-PCB applications and designed Front-End environments to feature API integration and React functionality. I am a developer who knows the versatility of researching language documentation effectively while throwing solutions at the wall to create solutions with a speedy-learning outlook. I enjoy working with teams and collaborating in the workspace, but I am experienced as a solo developer who is never afraid to ask for assistance on problems!
                   <br />
                   <br />
-                  I am still learning and love to so every day, be it working with Arch Linux as my main operating system, or building custom websites for my personal projects. Every time I get a chance to learn and grow, I become a stronger developer who can implement new ideas and practice my innovative abilities. I hope to land in a spot where I can show that knowledge but also learn from people equally or more experienced than me. 
+                    I am still learning and love to so every day, be it working with Arch Linux as my main operating system, or building custom websites for my personal projects. Every time I get a chance to learn and grow, I become a stronger developer who can implement new ideas and practice my innovative abilities. I hope to land in a spot where I can show that knowledge but also learn from people equally or more experienced than me. 
+                    <br />
+                    <br />
+                    Feel free to reach out! I am open to collaboration or trying new opportunities in the development space!
+                  </span>
                   <br />
                   <br />
-                  Feel free to reach out! I am open to collaboration or trying new opportunities in the development space!
-                  <br />
-                  <br />
-                  <b className="Bold">jzavarelli&#64;zavpit: $</b> <b className="BoldItalic"><ReactTyped typeSpeed={100} stopped loop cursorChar="|" showCursor={true}/></b><br />
+                  <span className="delayBlock_c">
+                    <b className="Bold">jzavarelli</b>&#64;<b className="Bold2">zavpit</b>: $&nbsp;
+                    <b className="BoldItalic">
+                      <ReactTyped 
+                        strings={["User --what_is_next"]}
+                        typeSpeed={10}
+                        loop={false}
+                        showCursor={true}
+                        backSpeed={0}
+                        startDelay={5500} />
+                    </b><br />
+                  </span>
                 </p>
               </div>
 
@@ -381,24 +434,19 @@ function Portfolio() {
         {/* Professional Certifications - . */}
         <div className="certEntries">
           <h2>Certifications</h2>
-          <article className="pocket_flex">
-            <h3>GitHub Foundations</h3>
-            <p>
-              <button className="statusIndicator"><a href="https://www.credly.com/badges/abc234d9-41f6-4534-970b-ec50dafaf260/linked_in_profile" /></button> @GitHub | 05-02-2025
-            </p>
-          </article>
-          <article className="pocket_flex">
-            <h3>UiPath Professional Automation Developer Associate</h3>
-            <p>
-              <button className="statusIndicator"><a href="https://credentials.uipath.com/87e59944-e467-40ef-b02b-ef656f2bf251#acc.y42KjHVc" /></button> ID. 001751 | @UiPath | 09-10-2024
-            </p>
-          </article>
-          <article className="pocket_flex">
-            <h3>UiPath Professional Automation Developer Professional</h3>
-            <p>
-              <button className="statusIndicator"><a href="https://credentials.uipath.com/af3c7ba7-b36f-4a8b-a90b-16d18b4fcb5b#acc.diCUfgaB" /></button> ID. 001517 | @UiPath | 10-10-2024
-            </p>
-          </article>
+          {certFile.map((cert: Certs) => (
+            <div key={cert.id}>
+              <article className="pocket_flex">
+                <h3>{cert.title}</h3>
+                <p>
+                  <button className="statusIndicator" onClick={() => window.location.href = cert.link_path}>
+                    {getStatus(cert.expire_date)}
+                  </button>
+                  Earned: {cert.earned_date} Issuer: {cert.issuer}
+                </p>
+              </article>
+            </div>
+          ))}
         </div>
       </main>
 

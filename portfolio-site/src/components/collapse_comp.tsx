@@ -3,7 +3,7 @@ import collapseUp from '/parts/chevron-up-32.png'
 import collapseDw from '/parts/chevron-dn-32.png'
 
 /* Libraries and CSS */
-import './collapse.scss'
+import '../styles/collapse.scss'
 
 import React, { useState, useRef, useEffect } from "react"
 

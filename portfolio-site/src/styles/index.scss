@@ -1,35 +1,35 @@
 /* Import Modules */
-
+@use "./sassvari" as scss;
 
 /* Custom Font Structures */
 @font-face {
   font-family: "Jersey10";
   src:local("Jersey10-Regular"),
-  url('./assets/fonts/Jersey10-Regular.ttf')
+  url('../assets/fonts/Jersey10-Regular.ttf')
 }
 
 @font-face {
   font-family: "Hack";
   src:local("Hack-Regular"),
-  url('./assets/fonts/Hack-Regular.ttf')
+  url('../assets/fonts/Hack-Regular.ttf')
 }
 
 @font-face {
   font-family: "Hackbold";
   src:local("Hack-Bold"),
-  url('./assets/fonts/Hack-Bold.ttf')
+  url('../assets/fonts/Hack-Bold.ttf')
 }
 
 @font-face {
   font-family: "Hackbolditalic";
   src:local("Hack-BoldItalic"),
-  url('./assets/fonts/Hack-BoldItalic.ttf')
+  url('../assets/fonts/Hack-BoldItalic.ttf')
 }
 
 @font-face {
   font-family: "Hackitalic";
   src:local("Hack-Italic"),
-  url('./assets/fonts/Hack-Italic.ttf')
+  url('../assets/fonts/Hack-Italic.ttf')
 }
 
 /* Custom Animations */
@@ -41,14 +41,6 @@
         transform: translateY(0);
     }
 }
-
-/* Color Palette */
-$background-color: #EAEAEA;
-$color_one: #EFF1ED;
-$color_two: #247BA0;
-$color_three: #27233A;
-$color_four: #6F584B;
-$color_five: #214E34;
 
 /* Root Level CSS */
 :root {
@@ -75,7 +67,7 @@ body {
   padding: 0px 40px;
   width: 60%;
   min-height: 100vh;
-  background-color: $background-color;
+  background-color: scss.$color_background;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -84,7 +76,7 @@ footer {
   flex-direction: row;
   justify-content: center;
   margin: 250px 0px 25px 0px;
-  background-color: $background-color;
+  background-color: scss.$color_background;
 }
 
 h1 {
@@ -135,12 +127,12 @@ button {
   border: 2px solid;
 }
 button:hover {
-  border-color: $color_two;
+  border-color: scss.$color_glauceous;
 }
 
 .statusIndicator {
   justify-content: center;
-  color: #333333;
+  color: scss.$color_background_dark;
   height: 25px;
   width: 100px;
 }
@@ -149,7 +141,7 @@ button:hover {
 /* Responsive and Theming CSS */
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
+    color: scss.$color_black;
     background-image: url("../src/assets/images/background-light.jpg");
     background-repeat: repeat-y;
     background-size: contain;
@@ -159,7 +151,7 @@ button:hover {
 /* Responsive and Theming CSS */
 @media (prefers-color-scheme: dark) {
   :root {
-    color: #213547;
+    color: scss.$color_white;
     background-image: url("../src/assets/images/background-dark.jpg");
     background-repeat: repeat-y;
     background-size: contain;

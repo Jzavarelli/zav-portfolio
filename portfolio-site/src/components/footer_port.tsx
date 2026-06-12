@@ -7,7 +7,7 @@ import linkedinLogo from '/logos/linkedin-icon.svg'
 /* Tool Item Images */
 
 /* Libraries and CSS */
-import '../Portfolio.scss'
+import '../styles/Portfolio.scss'
 
 /* Variables and Constants */
 const currentYear = new Date().getFullYear();
