@@ -1,12 +1,7 @@
-/* Module Imports */
+/* Import Modules */
+@use "./sassvari" as scss;
 
-/* Color Palette */
-$color_one: #EFF1ED;
-$color_two: #247BA0;
-$color_three: #27233A;
-$color_four: #6F584B;
-$color_five: #214E34;
-
+/* Custom Animations */
 @keyframes shake {
     0% { transform: rotate(0deg); } 
     10% { transform: rotate(2deg); }
@@ -21,6 +16,15 @@ $color_five: #214E34;
     100% { transform: rotate(0deg); }
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .shake:active {
     animation-name: shake;
     animation-duration: 0.5s;
@@ -29,7 +33,7 @@ $color_five: #214E34;
 }
 
 .positionTitle {
-  color: $color_five;
+  color: scss.$color_darkspruce;
 }
 
 /* CSS Section Boxes */
@@ -42,12 +46,60 @@ $color_five: #214E34;
     /* About Divs */
     .terminal {
       border-radius: 10px;
-      color: #FFFFFF;
-      background-color: #333333;
+      border: 5px solid transparent;
+      box-sizing: border-box;
+      color: scss.$color_ashgrey;
+      background-color: scss.$color_background_dark;
+      transition: border-color 0.25s ease;
+    }
+
+    .terminal:hover {
+      cursor: cell;
+      border-color: scss.$color_glauceous;
+    }
+
+    .terminal ::selection {
+      text-shadow: none;
+      color: scss.$color_black;
+      background: scss.$color_glauceous;
+    }
+
+    .terminal .delayText_a {
+      display: inline-block;
+      padding-left: 10px;
+      opacity: 0;
+      animation: fadeIn 0.25s ease-in forwards;
+      animation-delay: 2.15s;
+    }
+
+    .terminal .delayBlock_b {
+      opacity: 0;
+      animation: fadeIn 0.25s ease-in forwards;
+      animation-delay: 2.65s;
+    }
+
+    .terminal .delayText_b {
+      display: inline-block;
+      padding-left: 10px;
+      opacity: 0;
+      animation: fadeIn 0.25s ease-in forwards;
+      animation-delay: 4.15s;
+    }
+
+    .terminal .delayBlock_c {
+      opacity: 0;
+      animation: fadeIn 0.25s ease-in forwards;
+      animation-delay: 4.65s;
     }
 
     .terminal .Bold {
       font-family: "Hackbold";
+      color: scss.$color_peachcoral;
+    }
+
+    .terminal .Bold2 {
+      font-family: "Hackbold";
+      color: scss.$color_sagebrush;
     }
 
     .terminal .BoldItalic {
@@ -70,8 +122,8 @@ $color_five: #214E34;
       margin: 0px;
       padding: 25px 50px 25px 25px;
       border-radius: 5px;
-      background-color: $color_two;
-      color: white;
+      background-color: scss.$color_glauceous;
+      color: scss.$color_white;
     }
 
 .projectEntries {
@@ -96,7 +148,7 @@ $color_five: #214E34;
     .container_grid .container_flex {
       margin-right: auto;
       padding: 25px;
-      border: 2px dotted #333333;
+      border: 2px dotted scss.$color_black;
       border-radius: 4px;
     }
 
